@@ -21,3 +21,11 @@ For sorting, consider
     
 When you have an agenda query which has params, e.g. take by task, take by task + concep6t,
 you need to first create collections of those which suit the query then sort that collection
+
+## Ideas
+An agenda Item, a Task, typically has the objects suggested above. But, it's not unreasonable to extend it with one or any of:
+
+* Adhoc fields (slots)
+* Specific fields defined, say, by some domain
+
+Those added fields allow to construct heuristics which can be better refined than otherwise. Tasks can propose such new Tasks which have these fields.
