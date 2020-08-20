@@ -1,0 +1,56 @@
+GOALS
+    Implement Lenat's AM in clojure based on a version in prolog
+REFERENCES
+    https://github.com/akkartik/am-utexas
+    http://www.clara-rules.org/
+    https://clojure.org/reference/protocols equivalent to interfaces
+    https://github.com/KnowledgeGarden/MicroIE4j 
+
+MASTER TODO
+    Sort out a rules engine
+    Sort out an agenda
+    Sort out the AM loop
+BUGS
+MUSINGS
+    20200819
+        migrating to tq-am github repo
+    20200812
+        REFACTOR
+            move agenta.clj to am_agenda
+                Started agenda.md
+            move engine.clj to am_engine
+                Started engine.md
+        Rules engine 
+            It seems unlikely that the chosen rules engine will be
+            adequate to the task at hand. Seems more likely will have
+            to adapt the simple Java rules engine to this task - MicroIE4J
+        ADDED am_ie.inferrable.clj
+            The interface for MicroIE4J inference engine
+        ADDED am_ie.not.clj 
+            NOT 
+        STARTED am_ie.and_list.clj 
+            This must immplement the equivalent of List<Inferrable>
+        ADDED agenda sorts
+            Still compiles and runs
+        TODO 
+            UNIT TEST agenda  May not be the correct code
+    20200726
+        Went from :use to :require in core.clj
+            now compiles and runs
+        ADDED some agenda API
+            compiles and runs
+    20200725
+        First cut with lein
+        Shell made
+        Shelled in am.clj and agenda.clj
+            lein run runs ok
+        Started am_rules.h0 -- first heuristics class
+            Will contain several rules 
+            MUST figure out how to implement an inference engine with if-then rules
+        Began to shell in the am_loop
+            still compiles and runs
+        Added clara-rules to project.clj 
+            still compiles and runs
+        After a lot of fiddling, got am to run am_loop
+            :use instead of :require to solve a bug would not compile with 3 requires
+            but that means that am-clj.am had to be explicitly declared below
