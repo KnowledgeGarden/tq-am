@@ -35,6 +35,7 @@ Those added fields allow to construct heuristics which can be better refined tha
 The present design assumes *all tasks* will be handled by a single agenda.
 
 A complex option would be to have a single agenda per task type. 
+
 **Pros**
 * This has the benefit that you do not have to index heuristics by task. 
 * This simplifies parallel computation since each agenda can be associated with its own *engine* which means that multiple tasks can be running in parallel
